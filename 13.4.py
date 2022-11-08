@@ -21,8 +21,8 @@ list2 = []
 
 n = int(input())
 for i in range(n):
-    s = [int(i) for i in input().split()]
-    list2.extend(s)
+    s = [int(i) for i in input().split()]   #  переводим каждую переменную вводимой строки в цифру
+    list2.extend(s)     #    используем extend а не append
     list1 = quick_merge(list1, list2)
-    list2 = []
+    list2 = []      #  очищаем список
 print(*list1)
