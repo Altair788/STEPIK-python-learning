@@ -22,8 +22,7 @@ def quick_merge(list1, list2):
 list1 = []
 list2 = []
 
-n = int(input())
-for i in range(n):
+for i in range(int(input())):
     s = [int(i) for i in input().split()]   #  переводим каждую переменную вводимой строки в цифру
     list2.extend(s)     #    используем extend а не append
     list1 = quick_merge(list1, list2)
