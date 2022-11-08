@@ -16,9 +16,13 @@ def quick_merge(list1, list2):
 
     return result
 
-total_list = []
+list1 = []
+list2 = []
+
 n = int(input())
 for i in range(n):
-    num = [int(i) for i in input().split()]
-    quick_merge(total_list, num)
-    print(*total_list)
+    s = input()
+    list2.append(s)
+    list1 = quick_merge(list1, list2)
+    del list2
+print(list1)
