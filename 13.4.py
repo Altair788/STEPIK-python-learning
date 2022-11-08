@@ -21,8 +21,8 @@ list2 = []
 
 n = int(input())
 for i in range(n):
-    s = input()
-    list2.append(s)
+    s = [int(i) for i in input().split()]
+    list2.extend(s)
     list1 = quick_merge(list1, list2)
-    del list2
-print(list1)
+    list2 = []
+print(*list1)
