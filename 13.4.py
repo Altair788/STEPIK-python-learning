@@ -26,3 +26,4 @@ for i in range(n):
     list1 = quick_merge(list1, list2)
     list2 = []
 print(*list1)
+лоибрми
