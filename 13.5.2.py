@@ -1,6 +1,15 @@
 # объявление функции
 def is_prime(num):
-    pass
+    counter = 0
+    for i in range(1, num + 1):
+        if num % i == 0:
+            counter += 1
+    if counter == 2:
+        return True
+    else:
+        return False
+
+
 
 # считываем данные
 n = int(input())
