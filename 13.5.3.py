@@ -1,15 +1,10 @@
 # объявление функции
 def get_next_prime(num):
-    list = []
-    counter = 0
-    for i in range(1, num + 1):
+    num += 1
+    for i in range(2, num):
         if num % i == 0:
-            counter += 1
-            list.append(num)
-            num += 1
-    return list[1:]
-
-
+            return get_next_prime(num)
+    return num
 
 
 # считываем данные
