@@ -1,4 +1,4 @@
-#   количество должно быть четным
+
 def is_correct_bracket(text):
     for i in range(len(text)):
         if '()' in text:
