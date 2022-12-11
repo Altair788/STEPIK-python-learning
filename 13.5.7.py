@@ -3,7 +3,7 @@ def is_palindrome(text):
     list = []
 
     for i in text:
-        if i.isdigit():     #  тут было isalpha(), но по задаче идут цифры
+        if i.isdigit():  # тут было isalpha(), но по задаче идут цифры
             list.extend(i)
     for i in range(len(list)):
         if list[:] == list[::-1]:
@@ -13,6 +13,8 @@ def is_palindrome(text):
     #  тут были ошибки: оставлял блок функции
     #  с считыванием данных и вызовом функции
     #  и это мешало выполнению основной задачи
+
+
 def is_prime(num):
     counter = 0
     for i in range(1, num + 1):
@@ -23,15 +25,17 @@ def is_prime(num):
     else:
         return False
 
+
 def is_even_number(number):
     if number % 2 == 0:
         return True
     else:
         return False
 
+
 def is_valid_password(password):
     password = password.split(':')
-    if len(password) == 3:      #  здесь потребовалось отдельно прописать ограничение на длину списка
+    if len(password) == 3:  # здесь потребовалось отдельно прописать ограничение на длину списка
         a = password[0]
         b = password[1]
         c = password[2]
@@ -39,8 +43,9 @@ def is_valid_password(password):
             return True
         else:
             return False
-    else:                        #  и завершить функцию, если длина списка не соответствует условию
+    else:  # и завершить функцию, если длина списка не соответствует условию
         return False
+
 
 psw = input()
 
