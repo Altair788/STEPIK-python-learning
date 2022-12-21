@@ -9,20 +9,25 @@ def ugaday_ka():
         digit()
     else:
         a = int(a)
-    for i in range(1):
-        while a != x:
-            if a > x:
-                a = int(input('Слишком много, введи другое число   '))
-                continue
-            elif a < x:
-                a = int(input('Слишком мало, введи другое число   '))
-                continue
-        if a == x:
-            answer = input('Ты угадал! Поздравляю!!! Хочешь попробовать еще раз?  ' )
-            if answer.lower() == 'да':
-                ugaday_ka()
-            else:
-                disagree(answer)
+    if is_valid(a) is False:
+        print('А может быть введем целое число от 1 до 100?')
+        ugaday_ka()
+    else:
+        a = int(a)
+        for i in range(1):
+            while a != x:
+                if a > x:
+                    a = int(input('Слишком много, введи другое число   '))
+                    continue
+                elif a < x:
+                    a = int(input('Слишком мало, введи другое число   '))
+                    continue
+            if a == x:
+                answer = input('Ты угадал! Поздравляю!!! Хочешь попробовать еще раз?  ' )
+                if answer.lower() == 'да':
+                    ugaday_ka()
+                else:
+                    disagree(answer)
 
 #   отказ от игры
 def disagree(answer):
@@ -47,6 +52,11 @@ def digit():
     print('Это не число :(')
     print('Введи, пожалуйста, число')
     ugaday_ka()
+def is_valid(a):
+    if 1 <= int(a) <= 100:
+        return True
+    else:
+        return False
 
 answer = input('Привет! Меня зовут Эдуард и я написал код для игры "Угадай-ка". Хочешь в нее поиграть?   ')
 
