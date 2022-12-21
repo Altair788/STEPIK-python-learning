@@ -15,20 +15,25 @@ def ugaday_ka():
     else:
         a = int(a)
         for i in range(1):
+            counter = 0
             while a != x:
                 if a > x:
                     a = int(input('Слишком много, введи другое число   '))
+                    counter += 1
                     if is_valid(a) is False:
                         print('А может быть введем целое число от 1 до 100?')
                         ugaday_ka()
                     continue
                 elif a < x:
                     a = int(input('Слишком мало, введи другое число   '))
+                    counter += 1
                     if is_valid(a) is False:
                         print('А может быть введем целое число от 1 до 100?')
                         ugaday_ka()
                     continue
             if a == x:
+                counter += 1
+                print('С', counter, 'попытки!!')
                 answer = input('Ты угадал! Поздравляю!!! Спасибо, что поиграли в числовую угадайку со мной! Хочешь попробовать еще раз?  ' )
                 if answer.lower() == 'да':
                     ugaday_ka()
