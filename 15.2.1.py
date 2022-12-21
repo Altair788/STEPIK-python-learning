@@ -18,12 +18,18 @@ def ugaday_ka():
             while a != x:
                 if a > x:
                     a = int(input('Слишком много, введи другое число   '))
+                    if is_valid(a) is False:
+                        print('А может быть введем целое число от 1 до 100?')
+                        ugaday_ka()
                     continue
                 elif a < x:
                     a = int(input('Слишком мало, введи другое число   '))
+                    if is_valid(a) is False:
+                        print('А может быть введем целое число от 1 до 100?')
+                        ugaday_ka()
                     continue
             if a == x:
-                answer = input('Ты угадал! Поздравляю!!! Хочешь попробовать еще раз?  ' )
+                answer = input('Ты угадал! Поздравляю!!! Спасибо, что поиграли в числовую угадайку со мной! Хочешь попробовать еще раз?  ' )
                 if answer.lower() == 'да':
                     ugaday_ka()
                 else:
@@ -34,11 +40,13 @@ def disagree(answer):
     for i in range(1):
         if answer.lower() == 'нет':
             print('Возвращайся, когда передумаешь')
+            print('Спасибо, что поиграли в числовую угадайку со мной!')
             answer = input('А может разок сыграем? "да" или "нет" ?  ')
             if answer.lower() == 'да':
                 ugaday_ka()
             elif answer.lower() == 'нет':
                 print('Хорошо - хорошо :) Возвращайся, когда передумаешь')
+                print('Спасибо, что поиграли в числовую угадайку со мной!')
 
 
 #   правила игры
