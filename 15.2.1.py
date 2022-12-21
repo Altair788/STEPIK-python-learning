@@ -65,6 +65,7 @@ def digit():
     print('Это не число :(')
     print('Введи, пожалуйста, число')
     ugaday_ka()
+#   защита от дурака
 def is_valid(a):
     if 1 <= int(a) <= 100:
         return True
