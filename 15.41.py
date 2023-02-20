@@ -47,4 +47,11 @@ while quantity_password != 0:
     quantity_password -= 1
     if quantity_password != 0:
         continue
+def generate_password(lenght_password, chars):
+    password = ""
+    for i in range(lenght_password):
+        password += random.choice(chars)
+    return password
 
+for b in range(quantity_password):
+    print(generate_password)
