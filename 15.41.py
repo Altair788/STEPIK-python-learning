@@ -5,13 +5,13 @@ lowercase_letters = [a for a in 'abcdefghijklmnopqrstuvwxyz']
 uppercase_letters = [b for b in 'ABCDEFGHIJKLMNOPQRSTUVWXYZ']
 punctuation = [c for c in '!#$%&*+-=?@^_']
 chars = ''
-input('Какое количество паролей для генерации вам необходимо?  ')
-input('Какая длина одного пароля?     ')
-input('Включать ли цифры 0123456789?  ')
-input('Включать ли прописные буквы ABCDEFGHIJKLMNOPQRSTUVWXYZ?   ')
-input('Включать ли строчные буквы abcdefghijklmnopqrstuvwxyz?    ')
-input('Включать ли символы !#$%&*+-=?@^_?    ')
-input('Исключать ли неоднозначные символы il1Lo0O?   ')
+quantity_password = int(input('Какое количество паролей для генерации вам необходимо?  '))
+lenght_password = int(input('Какая длина одного пароля?     '))
+numbers_password = input('Включать ли цифры 0123456789? (да/нет)  ')
+capitalletters_password = input('Включать ли прописные буквы ABCDEFGHIJKLMNOPQRSTUVWXYZ? (да/нет)    ')
+lowercase_password = input('Включать ли строчные буквы abcdefghijklmnopqrstuvwxyz? (да/нет)   ')
+symbol_password = input('Включать ли символы !#$%&*+-=?@^_? (да/нет)    ')
+ex_password = input('Исключать ли неоднозначные символы il1Lo0O? (да/нет)   ')
 
 
 
